@@ -8,6 +8,8 @@ const userSchema = new Schema({
         unique: true
     },
     password: String,
+    completedSections: [String], 
+    completedSlides: [String],
 })
 
 const UserModel = mongoose.model('User', userSchema)

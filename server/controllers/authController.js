@@ -78,10 +78,49 @@ const getProfile =(req,res) =>{
         res.json(null)
     }
 }
+const markSlideCompleted = async (req, res) => {
+    try {
+        const { slideId, sectionId, isLastSlide } = req.body; // Receive both slide and section IDs and the isLastSlide flag
+        const { token } = req.cookies;
+
+        if (!token) {
+            return res.status(401).json({ error: "Unauthorized" });
+        }
+
+        jwt.verify(token, process.env.JWT_SECRET, {}, async (err, user) => {
+            if (err) {
+                return res.status(401).json({ error: "Unauthorized" });
+            }
+
+            // Update the user's completedSlides array
+            let updateData = {
+                $addToSet: { completedSlides: slideId }, // Add slide to completedSlides
+            };
+
+            // Only mark the section as completed if this is the last slide in the section
+            if (isLastSlide) {
+                updateData.$addToSet = { ...updateData.$addToSet, completedSections: sectionId }; // Add section to completedSections
+            }
+
+            const updatedUser = await User.findByIdAndUpdate(
+                user.id,
+                updateData,
+                { new: true }
+            );
+
+            return res.json(updatedUser);  // Send back updated user data
+        });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Something went wrong' });
+    }
+};
+
 
 module.exports = {
     test,
     registerUser,
     loginUser,
-    getProfile
+    getProfile,
+    markSlideCompleted,
 }
