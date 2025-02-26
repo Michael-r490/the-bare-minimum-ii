@@ -80,7 +80,7 @@ const slides = {
         id: 'methods1-slide6',
         title: 'Getting user input example',
         content: [
-          { type: 'image', src: '/M1ExAns.png', alt: 'Scanner Example' }
+          { type: 'image', src: '/UserInputEg.png', alt: 'Scanner Example' }
         ]
       }      
             

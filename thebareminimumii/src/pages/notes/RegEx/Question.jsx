@@ -4,61 +4,51 @@ import axios from 'axios';
 import MainNav from '../../../components/MainNav';
 
 const slides = {
-  methods1Q: [
+    RegExQ: [
     { 
-      id: 'methods1Q-slide1', 
-      title: 'Exam Style Question', 
+      id: 'RegExQ-slide1', 
+      title: 'Question for you', 
       content: [
-        'Write a Java Program that achieves the following: ',
-        { type: 'numbered', items: [
-          'Asks the user to enter a String representing a typical Irish 12-digit mobile phone number composed of 3 digit international code, 2 digit operator code, and seven digit number. For example 353874123122',
-
-          'Checks that exactly 12 digits have been entered. The program should prompt the user to enter exactly 12 digits and not progress until they have done so. You may assume that once 12-digits are entered the phone number is valid.',
-
-          'The program should print the 12 digit number, the international code, the operator code, the seven-digit number and the complete number formatted as shown in the last line of the example below. Example: '
-        ] },
-        'Enter a 12-digit Irish mobile phone number:',
-        '353874123122',
-        'You entered 353874123122',
-        'The international code is 353',
-        'The operator code is 87',
-        'The number is 4123122',
-        'The complete telephone number is (353) 87 4123122 '
+        'Specify a RegEx for the following!',
+        { type: 'bullet', items: [
+            'NUIM course codes',
+          ] },
+        '-CS141, CS143, etc.',
+        { type: 'bullet', items: [
+            'A full Euro amount',
+          ] },
+        '-€50, €995, €65000',
+        { type: 'bullet', items: [
+            'Roman numerals (between I and VII)',
+          ] },
+        '-I, II, III, IV, V, VI, VII',
+        { type: 'bullet', items: [
+            'Any Roman numeral using the characters IVXCLM',
+          ] },
+        '-I, V, X, L, C, D, M',
       ]
     },
     {
-        id: 'methods1-slide2',
-        title: 'Example Answer',
+        id: 'RegExQ-slide2',
+        title: 'Question 2',
         content: [
-          { type: 'image', src: '/M1ExAns.png', alt: 'Scanner Example' },
+          'More RegEx',
+          { type: 'bullet', items: [
+            'Accept the words Ireland and Iceland',
+            'Accept only the words dart, dark, darf',
+            'Accept the words ward, Ward, card, Card, lard, Lard',
+            'Accept any word beginning with c, d, or l that is 4 letters long and has "ar" as the 2nd and 3rd letter',
+            'Accept any sequence of 4 characters that has a digit in the first and last positions and letters everywhere else',
+            'What does the regex `[vcr]at` accept?',
+          ] },
         ]
     },
-    { 
-        id: 'methods1Q-slide3', 
-        title: 'Question for you...', 
-        content: [
-          'Write a Java Program that asks the users to enter: ',
-          { type: 'numbered', items: [
-            'Name',
-            'Address',
-            'Date of Birth',
-            'Wages',
-            'Number of brothers and sisters'
-          ] },
-          'The program should print out the following with the values in { } replaced by the input. ',
-          'Hi {Name}, ',
-          'You live at {Address}',
-          'Your date of birth is {Date of birth}',
-          'You earn {wages}',
-          'You have {Number of brothers and sisters} brothers and sisters'
-        ]
-      },
             
   ],
 };
 
-const M1Question = () => {
-  const [currentSection, setCurrentSection] = useState('methods1Q');
+const RegExQuestion = () => {
+  const [currentSection, setCurrentSection] = useState('RegExQ');
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const [completedSections, setCompletedSections] = useState([]);
   const navigate = useNavigate();
@@ -158,4 +148,4 @@ const M1Question = () => {
   );
 };
 
-export default M1Question;
+export default RegExQuestion;

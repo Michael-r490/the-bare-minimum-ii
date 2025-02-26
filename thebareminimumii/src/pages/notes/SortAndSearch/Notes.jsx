@@ -7,32 +7,173 @@ const slides = {
     SortAndSearch: [
         { 
          id: 'SortAndSearch-slide1', 
-        title: 'Introduction to SortAndSearch', 
+        title: 'Importance of a programing repertoire', 
          content: [
-           'SortAndSearch are the next step in learning programming.',
            { type: 'bullet', items: [
-             'They build on the concepts of methods.',
-            'They allow for more complex behaviors and structures.'
+            'In general it is a good problem solving strategy to have a repertoire of fundamental or simple algorithms',
+            'These algorithms can then be combined (as building blocks) or adapted to solve larger more complex problems',
+            'Array processing is similar to other programming problem domains in that complicated problems can be decomposed into simpler fundamental algorithms',
+            'In this lesson we explore an number of common “simple” algorithms for manipulating data in a one dimensional array',
            ] },
-          'This section will cover advanced usage of methods.'
       ]
     },
     { 
       id: 'SortAndSearch-slide2', 
-      title: 'Why Use Methods2?', 
+      title: 'Array Processing', 
       content: [
-        { type: 'bullet', items: [
-          'Improves code organization.',
-          'Provides more control over function behavior.'
+        { type: 'code', items: [
+          'double[] data= {12,223,232,666,1433,0,-34,14,43,554}; ',
         ] },
-        'SortAndSearch give more power and flexibility in coding.',
+        'How do we Find the smallest number in an array?',
         { type: 'bullet', items: [
-          'Helps in breaking down complex problems.',
-          'Ensures more readable and maintainable code.'
+          'How do we find the smallest value?',
+          'What is the difference between that and finding the location (index) of the smallest value?',
+          'How do we find the index/location of the smallest value within the array?',
         ] }
       ]
     },
-    // Add more slides as needed
+    { 
+      id: 'SortAndSearch-slide3', 
+      title: 'Finding the smallest', 
+      content: [
+          'A common problem is to find the smallest value in an array',
+          'We want to find the smallest value and its location within the array',
+          '“Linear Search” checks the entire array',
+          'Algorithm:',
+          { type: 'bullet', items: [
+            'Assume that the smallest value is at the start of the array (record its value and location)',
+            'smallestValue & indexOfSmallest',
+            'See if we can find a smaller value',
+            'We keep a note of the current value (index location) we think has the smallest value, until we check the entire array',
+          ] }
+      ]
+    },
+    { 
+      id: 'SortAndSearch-slide4', 
+      title: 'Linear Search', 
+      content: [
+          'A common problem is to find the smallest value in an array',
+          'We want to find the smallest value and its location within the array',
+          '“Linear Search” checks the entire array',
+          'Algorithm:',
+          { type: 'bullet', items: [
+            'Assume that the smallest value is at the start of the array (record its value and location)',
+            'smallestValue & indexOfSmallest',
+            'See if we can find a smaller value',
+            'We keep a note of the current value (index location) we think has the smallest value, until we check the entire array',
+          ] }
+      ]
+    },
+    { 
+      id: 'SortAndSearch-slide5', 
+      title: 'Linear Search', 
+      content: [
+        { type: 'image', src: '/SaSn1p1.png', alt: 'Scanner Example' },
+      ]
+    },
+    { 
+      id: 'SortAndSearch-slide6', 
+      title: 'Linear Search', 
+      content: [
+        { type: 'image', src: '/SaSn1p2.png', alt: 'Scanner Example' },
+      ]
+    },
+    { 
+      id: 'SortAndSearch-slide7', 
+      title: 'Linear Search', 
+      content: [
+        { type: 'image', src: '/SaSn1p3.png', alt: 'Scanner Example' },
+      ]
+    },
+    { 
+      id: 'SortAndSearch-slide8', 
+      title: 'Linear Search', 
+      content: [
+        { type: 'image', src: '/SaSn1p4.png', alt: 'Scanner Example' },
+      ]
+    },
+    { 
+      id: 'SortAndSearch-slide9', 
+      title: 'Linear Search', 
+      content: [
+        { type: 'image', src: '/SaSn1p5.png', alt: 'Scanner Example' },
+      ]
+    },
+    { 
+      id: 'SortAndSearch-slide10', 
+      title: 'Linear Search', 
+      content: [
+        { type: 'image', src: '/SaSn1p6.png', alt: 'Scanner Example' },
+      ]
+    },
+    { 
+      id: 'SortAndSearch-slide11', 
+      title: 'Linear Search', 
+      content: [
+        { type: 'image', src: '/SaSn1p7.png', alt: 'Scanner Example' },
+      ]
+    },
+    { 
+      id: 'SortAndSearch-slide12', 
+      title: 'Linear Search', 
+      content: [
+        { type: 'image', src: '/SaSn1p8.png', alt: 'Scanner Example' },
+      ]
+    },
+    { 
+      id: 'SortAndSearch-slide13', 
+      title: 'Linear Search', 
+      content: [
+        { type: 'image', src: '/SaSn1p9.png', alt: 'Scanner Example' },
+      ]
+    },
+    { 
+      id: 'SortAndSearch-slide14', 
+      title: 'Linear Search', 
+      content: [
+        { type: 'image', src: '/SaSn1p10.png', alt: 'Scanner Example' },
+      ]
+    },
+    { 
+      id: 'SortAndSearch-slide15', 
+      title: 'Linear Search', 
+      content: [
+        { type: 'image', src: '/SaSn1p11.png', alt: 'Scanner Example' },
+      ]
+    },
+    { 
+      id: 'SortAndSearch-slide16', 
+      title: 'Linear Search', 
+      content: [
+        'Linear search is fine for small arrays, but on an array containing a 1000,000 items, it would take 1000,000 tests',
+        'In terms of computation complexity, linear search takes O(n) time or the order of time linearly related to the number of elements',
+        'We would often keep arrays in sorted order',
+      ]
+    },
+    { 
+      id: 'SortAndSearch-slide17', 
+      title: 'Example Algorithm', 
+      content: [
+        'Find the Smallest element in an array ~',
+        { type: 'code', items: [
+`
+double[] data = {12,223,232,666,1433,0,-34,14,43,554};
+
+double smallestValue = data[0];
+
+for(int i = 1; i < smallestValue)
+    if (data[i] < smallestValue)
+    (
+        smallestValue = data[i];
+    )
+
+System.out.println("The smallest value in the array is " + smallestValue);    
+
+`
+          
+        ] },
+      ]
+    },
   ],
 };
 
@@ -85,6 +226,27 @@ const SortAndSearchNotes = () => {
                 </ul>
               );
             }
+            if (item.type === 'numbered') {
+              return (
+                <ol key={index}>
+                  {item.items.map((numberedItem, numberedIndex) => (
+                    <li key={numberedIndex}>{numberedItem}</li>
+                  ))}
+                </ol>
+              );
+            }
+            if (item.type === 'image') {
+              return (
+                <img
+                  key={index}
+                  src={item.src}
+                  alt={item.alt}
+                  style={{ maxWidth: '80%', height: 'auto' }}
+                />
+              );
+            }
+            if (item.type === 'code') 
+              return <pre key={index}>{item.items.join('\n')}</pre>;
             return null; // In case we have a different content type
           })}
         </div>
