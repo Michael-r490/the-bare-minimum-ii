@@ -8,6 +8,7 @@ import {Toaster} from 'react-hot-toast';
 import { UserContextProvider } from '../context/userContext';
 import Dashboard from './pages/Dashboard';
 import Home from './tbmHome';
+import Compiler2 from './compiler2';
 
 import M1Notes from './pages/notes/Methods1/Notes'; 
 import M1Question from './pages/notes/Methods1/Question'; 
@@ -51,6 +52,7 @@ import TuringMachineNote2 from './pages/notes/TuringMachines/Note2';
 axios.defaults.baseURL='http://localhost:8000';
 axios.defaults.withCredentials=true
 
+
 function App() {
   return (
     <UserContextProvider>
@@ -62,6 +64,7 @@ function App() {
           <Route path='/dashboard' element ={<Dashboard />} />
 
           <Route path='/tbhHome' element={<Home />} />
+          <Route path='/compiler2' element={<Compiler2 />} />
 
           <Route path="/notes/methods1/notes/*" element={<M1Notes />} />
           <Route path="/notes/methods1/question/*" element={<M1Question />} />
@@ -87,20 +90,20 @@ function App() {
           <Route path="/notes/fsm/Note3/*" element={<FSMNote3 />} />
           <Route path="/notes/fsm/Question/*" element={<FSMQuestion />} />
 
-          <Route path="/notes/SortAndSearch/Notes*" element={<SortAndSearchNotes />} />
-          <Route path="/notes/SortAndSearch/Question*" element={<SortAndSearchQ />} />
-          <Route path="/notes/SortAndSearch/Note2*" element={<SortAndSearchNote2 />} />
-          <Route path="/notes/SortAndSearch/Note3*" element={<SortAndSearchNote3 />} />
+          <Route path="/notes/SortAndSearch/Notes/*" element={<SortAndSearchNotes />} />
+          <Route path="/notes/SortAndSearch/Question/*" element={<SortAndSearchQ />} />
+          <Route path="/notes/SortAndSearch/Note2/*" element={<SortAndSearchNote2 />} />
+          <Route path="/notes/SortAndSearch/Note3/*" element={<SortAndSearchNote3 />} />
 
-          <Route path="/notes/classandobj/Notes*" element={<CnONotes />} />
-          <Route path="/notes/classandobj/Note2*" element={<CnONote2 />} />
-          <Route path="/notes/classandobj/Note3*" element={<CnONote3 />} />
-          <Route path="/notes/classandobj/Note4*" element={<CnONote4 />} />
+          <Route path="/notes/classandobj/Notes/*" element={<CnONotes />} />
+          <Route path="/notes/classandobj/Note2/*" element={<CnONote2 />} />
+          <Route path="/notes/classandobj/Note3/*" element={<CnONote3 />} />
+          <Route path="/notes/classandobj/Note4/*" element={<CnONote4 />} />
 
           <Route path="/notes/inheritance/*" element={<INotes />} />
 
-          <Route path="/notes/TuringMachines/Notes*" element={<TuringMachineNotes />} />
-          <Route path="/notes/TuringMachines/Note2*" element={<TuringMachineNote2 />} />
+          <Route path="/notes/TuringMachines/Notes/*" element={<TuringMachineNotes />} />
+          <Route path="/notes/TuringMachines/Note2/*" element={<TuringMachineNote2 />} />
 
         </Routes>
     </UserContextProvider>

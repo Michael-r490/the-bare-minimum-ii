@@ -15,13 +15,13 @@ export default function Home() {
     <div className="TBM">
       <MainNav/>
       <header className="CS162-header">
-        <h2>CS162</h2>
-        <h7>
+        <h2>CS162 Topic Notes</h2>
+        {/* <h7>
            Complete <span role="img" aria-label="Complete">✅</span>
            Questions <span role="img" aria-label="Questions">❔</span> 
            Test <span role="img" aria-label="Test">📄</span>
            Incomplete<span role="img" aria-label="Incomplete">⬜</span>
-        </h7>
+        </h7> */}
       </header>
         <div className="sub-nav">
           <div className="list-item">Methods 1:</div>

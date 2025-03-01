@@ -40,3 +40,63 @@
 .read-the-docs {
   color: #888;
 }
+
+.Compiler {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  padding-top: 50px; /* Space for navbar */
+}
+
+.Container {
+  display: flex;
+  flex-direction: column;
+  height: calc(90vh - 50px); /* Full height minus navbar */
+  width: 80vw;;
+}
+
+.Editor {
+  height: 70%; /* Top 40% for editor */
+  border-bottom: 2px solid #ccc; /* Separator */
+}
+
+.OutputContainer {
+  display: flex;
+  flex-direction: column;
+  height: 30%;
+  padding: 10px;
+  gap: 10px; /* Space between button and output box */
+}
+
+.RunButton {
+  padding: 10px 20px;
+  background-color: #ff8c1a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.RunButton:hover {
+  background-color: #ff6f00;
+}
+
+.Output {
+  flex: 1;
+  padding: 20px;
+  background-color: #f5f5f5;
+  overflow-y: auto;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.text-content {
+  padding: 20px;
+  overflow-y: auto;
+  flex: 1;
+}
