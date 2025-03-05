@@ -6,7 +6,6 @@ import Login from './pages/Login';
 import axios from 'axios';
 import {Toaster} from 'react-hot-toast';
 import { UserContextProvider } from '../context/userContext';
-import Dashboard from './pages/Dashboard';
 import Home from './tbmHome';
 import Compiler2 from './compiler2';
 
@@ -61,7 +60,6 @@ function App() {
           <Route path='/' element = {<Login />} />
           <Route path='/register' element ={<Register />} />
           <Route path='/login' element ={<Login />} />
-          <Route path='/dashboard' element ={<Dashboard />} />
 
           <Route path='/tbhHome' element={<Home />} />
           <Route path='/compiler2' element={<Compiler2 />} />

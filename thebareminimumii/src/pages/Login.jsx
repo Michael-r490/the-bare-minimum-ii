@@ -3,6 +3,7 @@ import axios from 'axios'
 import {toast} from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
 import NavBar from '../components/NavBar';
+import "../../authStyles.css";
 
 export default function Login() {
   const navigate = useNavigate()
@@ -32,16 +33,29 @@ export default function Login() {
   }
 
   return (
-    <div>
+    <div className="auth-page">
+      <h1>The Bare Minimum</h1>
       <NavBar />
       <h2>Login to your account</h2>
-      <form onSubmit ={loginUser}>
-        <label>Email</label>
-        <input type='email' placeholder='enter email'value={data.email} onChange={(e) => setData({...data, email: e.target.value})}/>
-        <label>Password</label>
-        <input type='password' placeholder='enter password'value={data.password} onChange={(e) => setData({...data, password: e.target.value})}/>
-        <button type ='submit'>Login</button>
+      <form className="auth-form" onSubmit={loginUser}>
+        <label className="auth-label">Email</label>
+        <input 
+          type="email" 
+          className="auth-input" 
+          placeholder="enter email" 
+          value={data.email} 
+          onChange={(e) => setData({ ...data, email: e.target.value })}
+        />
+        <label className="auth-label">Password</label>
+        <input 
+          type="password" 
+          className="auth-input" 
+          placeholder="enter password" 
+          value={data.password} 
+          onChange={(e) => setData({ ...data, password: e.target.value })}
+        />
+        <button className="auth-button" type="submit">Login</button>
       </form>
     </div>
-  )
+  );
 }
