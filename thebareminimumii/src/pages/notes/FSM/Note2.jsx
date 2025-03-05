@@ -113,7 +113,7 @@ const FSMNote2 = () => {
           })}
         </div>
       </div>
-      <div>
+      <div className="ButtonContainer">
       {currentSlideIndex > 0 && (
           <button
             onClick={() => setCurrentSlideIndex(Math.max(currentSlideIndex - 1, 0))}
