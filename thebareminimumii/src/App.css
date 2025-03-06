@@ -130,3 +130,21 @@
 .ButtonContainer button:hover {
   background-color: #ff8c1a;
 }
+
+.Toolbar {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ccc;
+}
+
+.LoadButton {
+  padding: 8px 16px;
+  background-color: #ff6f00;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
