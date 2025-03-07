@@ -4,6 +4,7 @@ import {toast} from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
 import NavBar from '../components/Navbar';
 import "../../authStyles.css";
+import API from '../api';
 
 export default function Login() {
   const navigate = useNavigate()
@@ -16,7 +17,7 @@ export default function Login() {
     e.preventDefault()
     const{email, password} = data
     try{
-      const{data} = await axios.post('/login', {
+      const{data} = await API.post('/login', {
         email,
         password
       });

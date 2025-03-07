@@ -4,6 +4,7 @@ import {toast} from 'react-hot-toast';
 import {useNavigate} from 'react-router-dom';
 import NavBar from '../components/Navbar';
 import "../../authStyles.css";
+import API from '../api';
 
 export default function Register() {
   const navigate = useNavigate()
@@ -17,7 +18,7 @@ export default function Register() {
     e.preventDefault()
     const{name,email,password} = data
     try{
-      const {data} = await axios.post('/register', {
+      const {data} = await API.post('/register', {
         name,email,password
       })
       if(data.error){
