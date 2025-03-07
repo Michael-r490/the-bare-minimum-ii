@@ -2,7 +2,7 @@ import {useState} from 'react';
 import axios from 'axios';
 import {toast} from 'react-hot-toast';
 import {useNavigate} from 'react-router-dom';
-import NavBar from '../components/NavBar';
+import NavBar from '../components/Navbar';
 import "../../authStyles.css";
 
 export default function Register() {
