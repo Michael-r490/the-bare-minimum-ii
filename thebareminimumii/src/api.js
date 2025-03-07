@@ -19,3 +19,4 @@ export const executeCode = async (language, sourceCode) =>{
     });
     return response.data;
 };
+export default API;
