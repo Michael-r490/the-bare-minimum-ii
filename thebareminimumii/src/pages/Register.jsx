@@ -18,7 +18,7 @@ export default function Register() {
     e.preventDefault()
     const{name,email,password} = data
     try{
-      const {data} = await API.post('/register', {
+      const {data} = await API.post('/Register', {
         name,email,password
       })
       if(data.error){

@@ -17,7 +17,7 @@ export default function Login() {
     e.preventDefault()
     const{email, password} = data
     try{
-      const{data} = await API.post('/login', {
+      const{data} = await API.post('/Login', {
         email,
         password
       });
