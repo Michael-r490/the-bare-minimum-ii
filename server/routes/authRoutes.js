@@ -2,12 +2,13 @@ const express = require('express');
 const router = express.Router();
 const cors = require('cors');
 const{test, registerUser, loginUser, getProfile, markSlideCompleted}=require('../controllers/authController')
+const API_URL = process.env.VITE_API_URL;
  
 
 router.use(
     cors({
         credentials: true,
-        origin: 'http://localhost:5173'
+        origin: API_URL
     })
 )
 
