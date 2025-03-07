@@ -21,8 +21,8 @@ router.use(
 );
 
 router.get('/', test);
-router.post('/register', registerUser);
-router.post('/login', loginUser);
+router.post('/Register', registerUser);
+router.post('/Login', loginUser);
 router.get('/profile', getProfile);
 router.post('/mark-slide-completed', markSlideCompleted);
 
