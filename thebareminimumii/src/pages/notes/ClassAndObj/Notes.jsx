@@ -146,7 +146,7 @@ const CnONotes = () => {
   const handleSlideCompletion = async () => {
     try {
       if (currentSlideIndex + 1 === totalSlides) {
-        await axios.post('/mark-slide-completed', {
+        await axios.post('https://the-bare-minimum-ii-backend.onrender.com/mark-slide-completed', {
           slideId: currentSlide.id,
           sectionId: currentSection,
           isLastSlide: true,
