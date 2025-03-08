@@ -37,18 +37,16 @@ mongoose.connect(process.env.MONGO_URL)
 const allowedOrigins = ['https://the-bare-minimum-ii.onrender.com', 'http://localhost:5173'];
 
 app.use(cors({
-    origin: function (origin, callback) {
-      console.log('Origin:', origin); // Log incoming origin
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        console.log('Blocked by CORS:', origin); // Log blocked origin
-        callback(new Error('Not allowed by CORS'));
-      }
-    },
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    credentials: true
-  }));
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true); // Allow the request
+    } else {
+      callback(new Error('Not allowed by CORS')); // Reject the request
+    }
+  },
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],  // You can customize the allowed methods here
+  credentials: true // This is important if you're using cookies or sessions
+}));
 
 // Middleware
 app.use(express.json());

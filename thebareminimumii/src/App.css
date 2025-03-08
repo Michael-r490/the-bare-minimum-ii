@@ -1,9 +1,4 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: left;
-}
+
 
 .logo {
   height: 6em;
@@ -52,7 +47,8 @@
   display: flex;
   flex-direction: column;
   height: calc(90vh - 50px); /* Full height minus navbar */
-  width: 80vw;;
+  width: 80vw;
+  
 }
 
 .Editor {
