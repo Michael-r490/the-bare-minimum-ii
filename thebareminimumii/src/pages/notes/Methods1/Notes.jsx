@@ -117,9 +117,26 @@ const M1Notes = () => {
     }
   };
 
+  const progress = ((currentSlideIndex + 1) / totalSlides) * 100;
   return (
     <div>
       <MainNav />
+      <div style={{ margin: '20px 0' }}>
+      <div style={{ height: '10px', background: '#e0e0e0', borderRadius: '5px' }}>
+        <div 
+          style={{ 
+            height: '100%', 
+            width: `${progress}%`, 
+            background: '#4caf50', 
+            borderRadius: '5px', 
+            transition: 'width 0.3s ease-in-out' 
+          }}
+        />
+      </div>
+      <p style={{ textAlign: 'center', marginTop: '10px' }}>
+        {Math.round(progress)}% complete
+      </p>
+    </div>
       <div>
         <h2>{currentSlide.title}</h2>
         <div>
