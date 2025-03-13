@@ -1,11 +1,9 @@
 const User = require('../models/user');
 const {hashPassword, comparePassword} = require('../helpers/auth');
 const jwt = require('jsonwebtoken');
-
 const test = (req, res) => {
     res.json('test is working')
 }
-
 const registerUser = async(req, res) =>{
     try{
         const {name,email,password} = req.body;
@@ -25,9 +23,7 @@ const registerUser = async(req, res) =>{
                 error: 'Email already used'
             })
         };
-
-        const hashedPassword = await hashPassword(password)
-
+       const hashedPassword = await hashPassword(password)
         const user = await User.create({
             name,
             email,
@@ -38,18 +34,15 @@ const registerUser = async(req, res) =>{
         console.log(error)
     }
 }
-
 const loginUser = async(req, res) => {
     try{
        const{email,password} = req.body;
-
        const user = await User.findOne({email});
        if(!user){
             return res.json({
                 error: 'No user found'
             })
         }
-
        const match = await comparePassword(password, user.password)
        if(match){
             jwt.sign({email: user.email, id: user._id, name:  user.name}, process.env.JWT_SECRET, {}, (err, token) => {
@@ -80,7 +73,7 @@ const getProfile =(req,res) =>{
 }
 const markSlideCompleted = async (req, res) => {
     try {
-        const { slideId, sectionId, isLastSlide } = req.body; // Receive both slide and section IDs and the isLastSlide flag
+        const { slideId, sectionId, isLastSlide } = req.body;
         const { token } = req.cookies;
 
         if (!token) {
@@ -91,15 +84,12 @@ const markSlideCompleted = async (req, res) => {
             if (err) {
                 return res.status(401).json({ error: "Unauthorized" });
             }
-
-            // Update the user's completedSlides array
             let updateData = {
-                $addToSet: { completedSlides: slideId }, // Add slide to completedSlides
+                $addToSet: { completedSlides: slideId }, 
             };
 
-            // Only mark the section as completed if this is the last slide in the section
             if (isLastSlide) {
-                updateData.$addToSet = { ...updateData.$addToSet, completedSections: sectionId }; // Add section to completedSections
+                updateData.$addToSet = { ...updateData.$addToSet, completedSections: sectionId }; 
             }
 
             const updatedUser = await User.findByIdAndUpdate(
@@ -108,7 +98,7 @@ const markSlideCompleted = async (req, res) => {
                 { new: true }
             );
 
-            return res.json(updatedUser);  // Send back updated user data
+            return res.json(updatedUser);  
         });
     } catch (error) {
         console.error(error);

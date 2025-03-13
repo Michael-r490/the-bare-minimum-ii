@@ -8,7 +8,7 @@ export default function Home() {
   const navigate = useNavigate();
 
   const handleNavigate = (section) => {
-    navigate(`/notes/${section}`); // Dynamically navigate to the section's notes
+    navigate(`/notes/${section}`);
   };
   return (
     <UserContextProvider>
