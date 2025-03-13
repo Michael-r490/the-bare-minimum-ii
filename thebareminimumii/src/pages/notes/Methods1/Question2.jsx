@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import MainNav from '../../../components/MainNav';
+import API from '../../../api';
 
 const slides = {
   methods1Q2: [
@@ -48,7 +49,7 @@ const M1Question2 = () => {
   const handleSlideCompletion = async () => {
     try {
       if (currentSlideIndex + 1 === totalSlides) {
-        await axios.post('/mark-slide-completed', {
+        await API.post('/mark-slide-completed', {
           slideId: currentSlide.id,
           sectionId: currentSection,
           isLastSlide: true,

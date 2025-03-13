@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import MainNav from '../../../components/MainNav';
+import API from '../../../api';
 
 const slides = {
     FSMn3: [
@@ -94,7 +95,7 @@ const FSMNote3 = () => {
   const handleSlideCompletion = async () => {
     try {
       if (currentSlideIndex + 1 === totalSlides) {
-        await axios.post('/mark-slide-completed', {
+        await API.post('/mark-slide-completed', {
           slideId: currentSlide.id,
           sectionId: currentSection,
           isLastSlide: true,
