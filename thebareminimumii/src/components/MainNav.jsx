@@ -19,7 +19,7 @@ const MainNav = () => {
         The Bare Minimum
       </button>
       <button className="home-button" onClick={() => navigate('/compiler2')}>
-        Compiler
+        Editor
       </button>
       <div className="account-section">
         <button className="account-button" onClick={handleSignOut}>
