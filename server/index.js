@@ -22,15 +22,14 @@ app.use(cors({
       callback(new Error('Not allowed by CORS')); // Reject the request
     }
   },
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],  // You can customize the allowed methods here
-  credentials: true // This is important if you're using cookies or sessions
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true 
 }));
 
 // Middleware
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
-
 // Routes
 app.use('/', require('./routes/authRoutes'));
 

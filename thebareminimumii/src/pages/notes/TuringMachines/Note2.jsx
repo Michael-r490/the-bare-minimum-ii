@@ -57,7 +57,7 @@ const TuringMachineNote2 = () => {
   const handleSlideCompletion = async () => {
     try {
       if (currentSlideIndex + 1 === totalSlides) {
-        await axios.post('/mark-slide-completed', {
+        await axios.post('https://your-api-domain.com/mark-slide-completed', {
           slideId: currentSlide.id,
           sectionId: currentSection,
           isLastSlide: true,
@@ -78,8 +78,6 @@ const TuringMachineNote2 = () => {
 return (
   <div>
     <MainNav />
-    
-    {/* Progress Bar */}
     <div style={{ margin: '20px 0' }}>
       <div style={{ height: '10px', background: '#e0e0e0', borderRadius: '5px' }}>
         <div 
@@ -96,8 +94,6 @@ return (
         {Math.round(progress)}% complete
       </p>
     </div>
-    
-    {/* Slide Content */}
     <div>
       <h2>{currentSlide.title}</h2>
       <div>
