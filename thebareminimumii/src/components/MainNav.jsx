@@ -16,7 +16,7 @@ const MainNav = () => {
   return (
     <nav className="navbar">
       <button className="home-button" onClick={() => navigate('/tbhHome')}>
-        The Bare Minimum
+        The Bare Minimum II
       </button>
       <button className="home-button" onClick={() => navigate('/compiler2')}>
         Editor

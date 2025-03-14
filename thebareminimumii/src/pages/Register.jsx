@@ -35,7 +35,7 @@ export default function Register() {
 
   return (
     <div className="auth-page">
-      <h1>The Bare Minimum</h1>
+      <h1>The Bare Minimum II</h1>
       <NavBar />
       <h2>Create new account</h2>
       <form className="auth-form" onSubmit={registerUser}>
