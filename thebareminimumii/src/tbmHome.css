@@ -1,4 +1,4 @@
-/* Basic Reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -12,17 +12,15 @@ body {
   min-height: 100vh;
 }
 
-/* Overall Page Container */
 .TBM {
   display: flex;
   flex-direction: column;
   height: 100vh;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 50px; /* Ensure content doesn't overlap with navbar */
+  padding-top: 50px; 
 }
 
-/* Main Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -78,10 +76,9 @@ body {
   margin-right: 5px;
 }
 
-/* Main Content Styling */
 .TBM-header {
   text-align: center;
-  margin-top: 100px; /* Give space for navbar */
+  margin-top: 100px; 
 }
 
 .CS162-header {
@@ -94,7 +91,6 @@ body {
   margin-top: 30px;
 }
 
-/* Updated List Item Styling */
 .list-item {
   display: flex;
   justify-content: space-between;
@@ -109,12 +105,11 @@ body {
   gap: 10px;
 }
 
-/* Square Buttons */
 .list-button {
   background-color: #ff6f00;
   border: none;
-  width: 40px; /* Square shape */
-  height: 40px; /* Square shape */
+  width: 40px; 
+  height: 40px; 
   color: white;
   font-size: 14px;
   border-radius: 5px;
@@ -133,7 +128,6 @@ body {
   cursor: not-allowed;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .sub-nav {
     width: 100%;

@@ -48,7 +48,8 @@ import INotes from './pages/notes/Inheritance/Notes';
 import TuringMachineNotes from './pages/notes/TuringMachines/Notes'; 
 import TuringMachineNote2 from './pages/notes/TuringMachines/Note2'; 
 
-axios.defaults.baseURL='http://localhost:8000';
+axios.defaults.baseURL='https://the-bare-minimum-ii.onrender.com';
+// axios.defaults.baseURL='http://localhost:8000';
 axios.defaults.withCredentials=true
 
 

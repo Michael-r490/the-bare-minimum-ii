@@ -347,7 +347,7 @@ const CnONote2 = () => {
             }
             if (item.type === 'code') 
               return <pre key={index}>{item.items.join('\n')}</pre>;
-            return null; // In case we have a different content type
+            return null; 
           })}
         </div>
       </div>

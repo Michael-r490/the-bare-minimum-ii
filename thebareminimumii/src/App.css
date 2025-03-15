@@ -40,20 +40,20 @@
   display: flex;
   flex-direction: column;
   height: 90vh;
-  padding-top: 50px; /* Space for navbar */
+  padding-top: 50px; 
 }
 
 .Container {
   display: flex;
   flex-direction: column;
-  height: calc(90vh - 50px); /* Full height minus navbar */
+  height: calc(90vh - 50px); 
   width: 80vw;
   
 }
 
 .Editor {
-  height: 70%; /* Top 40% for editor */
-  border-bottom: 2px solid #ccc; /* Separator */
+  height: 70%; 
+  border-bottom: 2px solid #ccc; 
 }
 
 .OutputContainer {
@@ -61,7 +61,7 @@
   flex-direction: column;
   height: 30%;
   padding: 10px;
-  gap: 10px; /* Space between button and output box */
+  gap: 10px; 
 }
 
 .RunButton {
@@ -99,10 +99,10 @@
 
 .ButtonContainer {
   display: flex;
-  justify-content: space-between; /* Space out buttons */
+  justify-content: space-between;
   align-items: center;
   position: fixed;
-  bottom: 20px; /* Fix at the bottom */
+  bottom: 20px; 
   left: 0;
   right: 0;
   padding: 10px 20px;
